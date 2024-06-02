@@ -3,6 +3,7 @@
 
 class FileManager
 {
+public:
 	//Read The File
 	void ReadFile()
 	{
