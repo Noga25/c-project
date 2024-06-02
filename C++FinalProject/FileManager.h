@@ -3,6 +3,12 @@
 
 class FileManager
 {
+	//First thing he reads th file
+	FileManager()
+	{
+		ReadFile();
+	}
+
 public:
 	//Read The File
 	void ReadFile()
