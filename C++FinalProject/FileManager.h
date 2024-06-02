@@ -37,18 +37,31 @@ private:
 /// regular methods which are being used
 /// </summary>
 public:
-    void CheckFile(const std::string& filename)
+    //Read what written in the file
+    void readFile(const std::string& filename)
+    {
+    }
+
+    //Check the format of the file
+    bool CheckFile(const std::string& filename)
     {
         std::cout
             << "Singleton reads files."
             << std::endl;
     }
 
-    void readFile(const std::string& filename) 
+    //Validate the data in the file
+    bool validateData() 
     {
     }
 
-    void ShowFile(const std::string& filename)
+    // Build the graph from the date that written
+    void buildGraph()
+    {
+    }
+
+    // Write the graph to a console
+    void writeGraph(const std::string& filename)
     {
     }
 };
