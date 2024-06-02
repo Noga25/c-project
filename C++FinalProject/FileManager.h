@@ -3,77 +3,14 @@
 
 class FileManager
 {
-/// <summary>
-/// Singelton
-/// </summary>
-public:
-    static FileManager& getInstance()
-    {
-        if (!instance) {
-            instance = new FileManager();
-        }
-        return *instance;
-    }
+	//Read The File
 
-    FileManager(const FileManager&) = delete;
-    FileManager& operator=(const FileManager&) = delete;
+	//Validate the file format
 
-private:
-    FileManager()
-    {
-        std::cout << "Singleton instance created."
-            << std::endl;
-    }
+	//Validate The File data
 
-    ~FileManager()
-    {
-        std::cout << "Singleton instance destroyed."
-            << std::endl;
-    }
+	//Build the graph
 
-    static FileManager* instance;
-
-/// <summary>
-/// regular methods which are being used
-/// </summary>
-public:
-    //Read what written in the file
-    void readFile(const std::string& filename)
-    {
-    }
-
-    //Check the format of the file
-    bool CheckFile(const std::string& filename)
-    {
-        std::cout
-            << "Singleton reads files."
-            << std::endl;
-    }
-
-    //Validate the data in the file
-    bool validateData() 
-    {
-    }
-
-    // Build the graph from the date that written
-    void buildGraph()
-    {
-    }
-
-    // Write the graph to a console
-    void writeGraph(const std::string& filename)
-    {
-    }
+	//write the graph to the console
 };
-
-// Initialize the static instance variable to nullptr
-FileManager* FileManager::instance = nullptr;
-
-int main()
-{
-    // Access the Singleton instance
-    FileManager& singleton = FileManager::getInstance();
-
-    return 0;
-}
 
