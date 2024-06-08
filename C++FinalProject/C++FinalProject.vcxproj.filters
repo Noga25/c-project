@@ -14,9 +14,15 @@
     <ClCompile Include="C++FinalProject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Container.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Container.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

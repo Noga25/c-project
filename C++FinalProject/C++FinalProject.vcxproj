@@ -128,8 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="C++FinalProject.cpp" />
+    <ClCompile Include="Container.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Container.h" />
     <ClInclude Include="FileManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
