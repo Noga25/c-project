@@ -2,14 +2,16 @@
 #include <string>
 #include <vector>
 
-struct Node {
-    int id;
-    std::string label;
+struct Edge {
+    int target_id;
+    int value;
 };
 
-struct Edge {
-    int source;
-    int target;
+struct Node {
+    int id;
+    std::vector<Edge> edges;
+
+    Node(int id) : id(id) {}
 };
 
 Graph::Graph()
