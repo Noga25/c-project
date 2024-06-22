@@ -1,16 +1,40 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
-class Graph {
-public:
-    Graph();
-    void buildGraph();
-    void findShortestPath(int sourceNode, int targetNode);
-    // Other graph methods...
+#include <list>
 
-private:
-    // Graph data structures (e.g. adjacency matrix, adjacency list)
-    // ...
+class Edge;
+class GraphNode;
+
+class Edge {
+public:
+    int Value;
+    GraphNode* A;
+    GraphNode* B;
+
+    Edge(GraphNode* a, GraphNode* b, int value);
+    GraphNode* Other(GraphNode* self);
+    void RemoveFromNodes();
+    ~Edge();
 };
 
-#endif // GRAPH_H
+class GraphNode {
+public:
+    int Value;
+    std::list<Edge*> Edges;
+
+    GraphNode(int value);
+    void Add(int nodeValue, int edgeValue);
+    GraphNode* GetShortest(std::list<Edge*> edgeList);
+    ~GraphNode();
+};
+
+class Graph {
+public:
+    GraphNode* Root;
+
+    Graph();
+    ~Graph();
+};
+
+#endif 
